@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Categorias</title>
+<link rel="icon" type="image/png" href="icon/mumu.png">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #6b2281;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+
+  /* === HEADER === */
+  header {
+    background-color: #6b2281;
+    color: white;
+    padding: 8px 20px;
+    border-bottom: 2px solid #ffcc00;
+  }
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-titulo img {
+    height: 40px;
+    width: auto;
+  }
+
+  .logo-titulo h1 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  nav {
+    margin-left: auto;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .menu li a:hover {
+    color: #ffcc00;
+  }
+
+  /* === Grid principal === */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: 10px;
+      }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;padding-bottom: 40px;
+  }
+
+  .grid-item {
+    background-color: #5a1d6c;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-item:hover {
+    transform: scale(1.03);
+  }
+
+  .grid-item img {
+    width: 100%;
+    flex: 1;           /* ocupa todo el espacio disponible del contenedor */
+    object-fit: cover;  /* ajusta y recorta para llenar */
+    border-bottom: 2px solid #ffcc00;
+    border-radius: 6px 6px 0 0;
+    display: block;
+  }
+
+  .grid-item p {
+    margin: 5px 0;
+    padding: 5px;
+    font-size: 16px;
+    color: #ffeb3b;
+    background-color: #5a1d6c;
+  }
+
+  /* === Footer === */
+  footer { 
+    background-color: #6b2281;
+    color: rgb(239, 255, 94);
+    font-size: 14px;
+    padding: 3px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    border-top: 2px solid #ffcc00;
+  }
+
+  #footer-ticker {
+    height: auto;
+  }
+  #footer-text {
+    position: static;
+    white-space: normal;
+    line-height: 25px;
+  }
+
+  /* === Responsive === */
+  @media(max-width:800px){
+    .header-content { flex-direction: column; gap: 10px; }
+    .menu { flex-direction: column; gap: 10px; }
+    .grid-container { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+  }
+  @media(max-width:600px){
+    .grid-container { grid-template-columns: 1fr; grid-template-rows: auto; }
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <div class="logo-titulo">
+    
+      <h1>Clasificados Villa Mercedes</h1>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="categorias.html">Categorías</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="icon/casa.png" alt="Alquileres y Ventas">
+      <p>Alquileres y Ventas</p>
+    </div>
+    <div class="grid-item">
+      <img src="icon/celulares.webp" alt="Celulares y Tablets">
+      <p>Celulares y Tablets</p>
+    </div>
+    <div class="grid-item">
+      <img src="icon/auto.webp" alt="Autos">
+      <p>Autos</p>
+    </div>
+    <div class="grid-item">
+      <img src="icon/moto.jpg" alt="Motos">
+      <p>Motos</p>
+    </div>
+    <div class="grid-item">
+      <img src="icon/mascota.jpg" alt="Mascotas">
+      <p>Mascotas</p>
+    </div>
+    <div class="grid-item">
+      <img src="icon/Varios.webp" alt="Varios">
+      <p>Varios</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div id="footer-ticker">
+    <div id="footer-text">© 2025 Roberto Carrera</div>
+  </div>
+</footer>
+
+</body>
+</html>
